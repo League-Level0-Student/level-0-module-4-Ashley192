@@ -15,15 +15,17 @@ public class RedSquare {
 	
 	public static void main(String[] args) {
 		
-		boolean isRed = false;
-		boolean isSquare = false;
+		boolean isRed = true;
+		boolean isSquare = true;
 		
 		// The && shown here means that both booleans must be true for the 
 		// entire if statement to be true. It is referred to as the "and"
 		// operator. 
-		if(isRed && isSquare) {
+	
+		 if(isRed && isSquare) {
 			drawRedSquare();
-		}
+		 }
+			
 		else if( !isRed && isSquare) {
 			drawBlueSquare();
 			}
@@ -32,6 +34,13 @@ public class RedSquare {
 		}
 		else if ( !isRed && !isSquare) {
 			drawBlueTriangle();
+			
+		}
+		else if(drewRedSquare || drewBlueSquare) {
+			JOptionPane.showMessageDialog(null,"You drew a square.");	
+	}
+		else if (drewRedTriangle || drewBlueTriangle) {
+			JOptionPane.showInputDialog("You drew a triangle.");
 		}
 		else {
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
@@ -42,21 +51,6 @@ public class RedSquare {
 		// 2. Initialize isRed to true instead of false and run the program 
 		//    again.
 		
-		// 3. Write an else if statement after the if statement that calls 
-		//    drawBlueSquare if isRed is false AND isSquare is true. 
-		//    Hint: Use ! and &&.
-		// 4. Write an else if statement that calls drawRedTriangle() if isRed
-		//    is true and isSquare is false.
-		// 5. Write an else if statement that calls drawBlueTriangle if both
-		//    isRed and isSquare are false.
-		
-		// 6. Keep rerunning your program, initializing isRed and isSquare to 
-		//    different values until you've seen a red square, red triangle, 
-		//    blue square and blue triangle drawn.
-		
-		// Much like the "and" operator, the "or" operator || can be used to 
-		// combine two boolean statements. However the statement becomes true
-		// if either boolean is true rather than only if both are true.
 		
 		// 7. Write an if statement using the static booleans at the top of 
 		//    the program. If drewRedSquare OR drewBlueSquare are true, then

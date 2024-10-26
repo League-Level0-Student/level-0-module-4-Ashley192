@@ -13,8 +13,10 @@ public class ChangeCalculator {
 
 		// Ask the user how many nickels they have
 String nickels=JOptionPane.showInputDialog("How many nickels do you have?");
-		// Convert their answer to an int.   Hint: Integer.parseInt()  
 int number= Integer.parseInt(nickels);
+
+String pennies=JOptionPane.showInputDialog("How many nickels do you have?");
+		// Convert their answer to an int.   Hint: Integer.parseInt()  
 		// Ask the user how many dimes they have, and convert their answer
 String dimes=JOptionPane.showInputDialog("How many dimes do you have?");
 int numberOfD=Integer.parseInt(dimes);
