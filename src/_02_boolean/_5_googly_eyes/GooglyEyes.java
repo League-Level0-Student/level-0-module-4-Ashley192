@@ -11,8 +11,8 @@ import processing.core.PImage;
  *    top level of this module. It can be anything as long as it has large eyes!
  * 
  * 2. Declare a variable for the image:
- *    PImage face;
- * 
+ *    PImage face
+ 
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
@@ -35,29 +35,27 @@ import processing.core.PImage;
  *    circles! To do this, imagine a rectangle that the pupil should stay
  *    within. When mouseX and mouseY goes outside of these bounds, set it back
  *    to the boundary. Put this code before you draw the pupils.
- */
+ */                                          
 public class GooglyEyes extends PApplet {
     static final int WIDTH = 800;
     static final int HEIGHT = 600;
-    
-    PImage face;
-    
     @Override
-    public void settings() {
-        size(WIDTH, HEIGHT);
-    }
-    
+    public void settings() {                                                                                   
+    	size(WIDTH, HEIGHT);                                         
+    }                                                                                     
+	PImage face;
+	                                                                                                                                                                                       
     @Override
     public void setup() {
-
+    	face=loadImage("Googly eyes.jpeg");
+        }
+ public void resized () {
     }
-
-    @Override
+	@Override
     public void draw() {
-
     }
-
     static public void main(String[] args) {
         PApplet.main(GooglyEyes.class.getName());
     }
+    
 }
