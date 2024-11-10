@@ -12,7 +12,7 @@ import processing.core.PImage;
  * 
  * 2. Declare a variable for the image:
  *    PImage face
- 
+
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
@@ -37,25 +37,48 @@ import processing.core.PImage;
  *    to the boundary. Put this code before you draw the pupils.
  */                                          
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
-    @Override
-    public void settings() {                                                                                   
-    	size(WIDTH, HEIGHT);                                         
-    }                                                                                     
-	PImage face;
-	                                                                                                                                                                                       
-    @Override
-    public void setup() {
-    	face=loadImage("Googly eyes.jpeg");
-        }
- public void resized () {
-    }
+	static final int WIDTH = 800;
+	static final int HEIGHT = 600;
 	@Override
-    public void draw() {
-    }
-    static public void main(String[] args) {
-        PApplet.main(GooglyEyes.class.getName());
-    }
-    
+	public void settings() {                                                                                   
+		size(WIDTH, HEIGHT);                                         
+	}                                                                                     
+	PImage face;
+
+	@Override
+	public void setup() {
+
+		face=loadImage("fox-animal-face-filter-template-video-chat-photo-vector-16740136.jpeg");
+		face.resize(WIDTH, HEIGHT);
+
+	}
+
+
+	@Override
+	public void draw() {
+		background(face);
+		fill(255,255,255);
+		
+
+ellipse( 283, 300, 100, 100);
+ellipse( 283+191, 300-5, 100, 100);
+	    fill (0,0,0);
+
+
+	 ellipse( mouseX, mouseY, 50, 50);
+		ellipse( mouseX+191, mouseY-5, 50,50);
+ 
+ //Add a right pupil and make it move by using
+  //   mouseX + [distance from left eye] and mouseY + [distance from left eye].
+	  
+ if(mousePressed) {
+			System.out.println(mouseX + "  " + mouseY);
+
+		}
+	}
+
+	static public void main(String[] args) {
+		PApplet.main(GooglyEyes.class.getName());
+	}
+
 }
