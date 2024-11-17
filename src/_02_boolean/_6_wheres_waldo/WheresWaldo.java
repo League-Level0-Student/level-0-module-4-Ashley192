@@ -30,6 +30,8 @@ import processing.core.PImage;
  *   6. Find the range of X and Y coordinates of Waldo in the image. You can
  *      use the following code to help you:
  *      println("X: " + mouseX + " Y: " + mouseY);
+ *      X: 387 Y: 205
+		X: 405 Y: 272
  * 
  *   7. Use an if statement to check if the user clicked the mouse
  * 
@@ -50,12 +52,23 @@ public class WheresWaldo extends PApplet {
 
     @Override
     public void setup() {
-        
+        waldo=loadImage("waldo.jpg");
+        waldo.resize(WIDTH, HEIGHT);
+        background(waldo);
+
     }
 
     @Override
     public void draw() {
-        
+    	if (mousePressed){
+    		if (mouseX>387 && mouseX<405 && mouseY>205 && mouseY<272) {
+    			playWhoohoo();
+    		}
+    		else {
+    			playDoh();
+    	
+    		}
+    	}
     }
 
     static public void main(String[] args) {

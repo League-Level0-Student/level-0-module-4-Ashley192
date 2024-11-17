@@ -58,24 +58,27 @@ public class GooglyEyes extends PApplet {
 	public void draw() {
 		background(face);
 		fill(255,255,255);
-		
+		ellipse( 283, 300, 100, 100);
+		ellipse( 283+191, 300-5, 100, 100);
+		fill (0,0,0);
 
-ellipse( 283, 300, 100, 100);
-ellipse( 283+191, 300-5, 100, 100);
-	    fill (0,0,0);
+	
+
+		if (mouseX>227 && mouseX<330 && mouseY>275&& mouseY<340) {
+			ellipse( mouseX, mouseY, 50, 50);
+			ellipse( mouseX+191, mouseY-5, 50,50);
+
+		}
+		//Add a right pupil and make it move by using
+		//   mouseX + [distance from left eye] and mouseY + [distance from left eye].
 
 
-	 ellipse( mouseX, mouseY, 50, 50);
-		ellipse( mouseX+191, mouseY-5, 50,50);
- 
- //Add a right pupil and make it move by using
-  //   mouseX + [distance from left eye] and mouseY + [distance from left eye].
-	  
- if(mousePressed) {
+		if(mousePressed) {
 			System.out.println(mouseX + "  " + mouseY);
 
 		}
 	}
+
 
 	static public void main(String[] args) {
 		PApplet.main(GooglyEyes.class.getName());
