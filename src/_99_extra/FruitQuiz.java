@@ -24,11 +24,11 @@ public class FruitQuiz extends KeyAdapter {
 		// 1. Print out the key code variable
 		System.out.println(keyCode);
 		// 2. Make 3 int variables that hold the key codes for A, b, and C
-		int a = arg0.getKeyCode();
-		int b = arg0.getKeyCode();
-		int c = arg0.getKeyCode();
+		int a = 65;
+		int b = 66;
+		int c = 67;
 // 3. If they selected the right fruit, do steps 4 and 7
-		if (question1.equals(c)) {
+		if (arg0.getKeyCode).equals(67)) {
 			correct();
 			nextQuestion(question2);
 		}
