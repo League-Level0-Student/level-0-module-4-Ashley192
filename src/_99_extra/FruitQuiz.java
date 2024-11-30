@@ -15,7 +15,10 @@ public class FruitQuiz extends KeyAdapter {
 				"<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2". Use question1 above as a guide.
 		question2 = new JLabel(
-				"<html>Which animal can fly? <br> A: Penguin Fruit <br> B: Penguin <br> C: Mosquito</html>");
+				"<html>Which animal can fly? <br> A: Chicken <br> B: Mosquito<br> C: Penguin </html> ");
+		question3 = new JLabel(
+				"<html>Which fruit is green? <br> A: Lemon <br> B: Lime<br> C: Orange </html> ");
+		
 	}
 
 	@Override
@@ -24,14 +27,40 @@ public class FruitQuiz extends KeyAdapter {
 		// 1. Print out the key code variable
 		System.out.println(keyCode);
 		// 2. Make 3 int variables that hold the key codes for A, b, and C
-		int a = 65;
-		int b = 66;
-		int c = 67;
+	int a=65;
+	int b=66;
+	int c=67;
+	
+	int current =1;
 // 3. If they selected the right fruit, do steps 4 and 7
-		if (arg0.getKeyCode).equals(67)) {
-			correct();
-			nextQuestion(question2);
-		}
+	if (keyCode==(c) && current == 1) {
+		correct();
+	playSound("correct.wav");
+		nextQuestion(question2);
+		current = 2;
+	}
+	else {
+		incorrect();
+		playSound("wrong.wav");}
+	if (keyCode==(b) && current == 2) {
+		correct();
+		nextQuestion(question3);
+		current = 3;
+	}
+	else {
+		incorrect();
+		playSound("wrong.wav");}
+	
+	if (keyCode==(b) && current == 3) {
+		correct();
+		playSound("correct.wav");
+
+	}
+	else {
+		incorrect();
+		playSound("wrong.wav");}}
+	
+
 // 4. Call the correct() method
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The
 		// questions must be in reverse order from top to bottom to work properly
@@ -40,7 +69,6 @@ public class FruitQuiz extends KeyAdapter {
 
 		// 13. check if it is right or wrong like you did for question1
 
-		if (question1.isShowing()) {
 
 			// 7. Use the nextQuestion() method to go to question2
 
@@ -48,8 +76,8 @@ public class FruitQuiz extends KeyAdapter {
 
 			// 9. Call the incorrect() method
 
-		}
-	}
+		
+	
 
 	private void correct() {
 		// 5. Find a sound for when they get a question right, and drag it into
