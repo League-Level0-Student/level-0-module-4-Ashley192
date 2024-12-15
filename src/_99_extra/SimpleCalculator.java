@@ -6,7 +6,7 @@ public class SimpleCalculator {
 	public static void main(String[] args) {
 
 		// 1. Get 2 numbers from the user and convert them to integer.
-		String num1 = JOptionPane.showInputDialog("Give me one number.");
+	while(true) {	String num1 = JOptionPane.showInputDialog("Give me one number.");
 
 		String num2 = JOptionPane.showInputDialog("Give me another number.");
 		int a =Integer.parseInt(num1);
@@ -27,7 +27,7 @@ public class SimpleCalculator {
 					else if (operation==(3)) {
 						divide( a,  b );
 
-		}
+		}}
 	}
 
 	// 5. Call the methods created in steps 3 and 4 to perform the appropriate
@@ -55,4 +55,4 @@ public class SimpleCalculator {
 	static void divide(int a, int b) {
 		JOptionPane.showInputDialog(a + " divided by " + b + " equals " +  (a/b));}
 }
-}
+
