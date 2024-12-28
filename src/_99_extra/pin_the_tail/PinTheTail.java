@@ -7,10 +7,13 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class PinTheTail extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+    static final int WIDTH = 807;
+    static final int HEIGHT = 595;
+    PImage donkey;
+    PImage tail;
 
     @Override
     public void settings() {
@@ -19,12 +22,28 @@ public class PinTheTail extends PApplet {
 
     @Override
     public void setup() {
-        
+    	donkey = loadImage("donkey.png"); 
+    	
+    	tail = loadImage("tail.png");
+    	tail.resize(110, 90); 
+    	
     }
 
     @Override
     public void draw() {
-        
+    	
+    	
+    	
+    	if (dist(0, 0, mouseX, mouseY) < 30) {
+    		background (donkey);
+    	}else {
+    		background(255,255,255);
+    	} 
+    	if (mousePressed) {
+    	image(tail, mouseX, mouseY);
+    	}
+    	rect(0, 0, 30, 30);
+    	rect(650, 100, 40, 40);
     }
 
     static public void main(String[] args) {
